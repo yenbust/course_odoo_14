@@ -4,7 +4,6 @@
         <record model="academy.course" id="erp_1">
             <field name="name">ERP 1</field>
             <field name="description">Description ERP 1</field>
-         
         </record>
     </data>
 </odoo>    
