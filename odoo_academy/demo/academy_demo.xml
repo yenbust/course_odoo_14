@@ -8,9 +8,9 @@
         </record>
     </data>
     <data noupdate="1">
-        <record model="academy.course" id="erp_1">
-            <field name="name">ERP 1</field>
-            <field name="description">Description ERP 1</field>
+        <record model="academy.course" id="erp_2">
+            <field name="name">ERP 2</field>
+            <field name="description">Description ERP 2</field>
             <field name="level">intermediate</field>
         </record>
     </data>
