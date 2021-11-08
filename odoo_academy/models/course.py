@@ -15,7 +15,7 @@ class Course(models.Model):
                                       ('advanced', 'Advanced')],
                             copy=False)
     active = fields.Boolean(string='Active', default=True)
-    base_price = fields.Boolean(string="Base Price", default=0.00)
+    base_price = fields.Float(string="Base Price", default=0.00)
     additional_fee = fields.Float(string="Additional Fee", default=0.00)
     total_price = fields.Float(string="Total Price", readonly=True)
     session_ids = fields.One2many(comodel_name='academy.session', inverse_name='course_id', string='Sessions')
