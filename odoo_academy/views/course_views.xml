@@ -15,11 +15,16 @@
                             <group>
                                 <field name="level"/>
                             </group>
+                            <group>
+                                <field name="base_price"/>
+                                <field name="additional_fee"/>
+                                <field name="total_price" force_save="1"/>
+                            </group>
                         </group>
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
-                            </page>     
+                            </page>    
                         </notebook>
                     </sheet>
                 </form>            
@@ -34,9 +39,13 @@
                     <field name="name"/>
                     <field name="description"/>
                     <field name="level"/>
+                    <field name="base_price"/>
+                    <field name="additional_fee"/>
+                    <field name="total_price"/>
                 </tree>
             </field>
-        </record>        
+        </record>       
+         
         <record model="ir.ui.view" id="course_view_search">
             <field name="name">academy.course.search</field>
             <field name="model">academy.course</field>
