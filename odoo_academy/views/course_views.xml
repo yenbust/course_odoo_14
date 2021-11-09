@@ -21,12 +21,12 @@
                                 <field name="total_price" force_save="1"/>
                             </group>
                         </group>
-                        <notebook>
-                            <page string="Description">
-                                <field name="description"/>
-                            </page>  
+                        <notebook>                            
                             <page string="Session">
                                 <field name="session_ids"/>
+                            </page>  
+                            <page string="Description">
+                                <field name="description"/>
                             </page>    
                         </notebook>
                     </sheet>
