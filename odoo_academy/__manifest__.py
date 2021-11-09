@@ -33,7 +33,7 @@
         'views/session_views.xml',
     ],
     
-    
+    # 'demo': ['demo/academy_demo.xml'],    
    
 
 
