@@ -14,9 +14,8 @@
                         </group>                            
                     </group>
                     <footer>
-                        <button name="create_sale_orders" type="object"
-                                string="Create" class="oe_highlight"/>
-                        or
+                        <button name="create_sale_orders" type="object" string="Create" class="oe_highlight"/>
+                       
                         <button special="cancel" string="Cancel"/>
 
                     </footer>
