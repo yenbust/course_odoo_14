@@ -16,7 +16,7 @@ class SaleWizard(models.TransientModel):
                                  default=_default_session)
     session_student_ids = fields.Many2many(comodel_name='res.partner',
                                  string='Students in Current Session',
-                                 required='session_id.students_ids',
+                                 required='session_id.student_ids',
                                  help='These are the students currently in the Session')
     student_ids = fields.Many2many(comodel_name='res.partner',
                                  string='Students for Sales Order')
