@@ -14,20 +14,20 @@ class SaleWizard(models.TransientModel):
                                  string='Session',
                                  required=True,
                                  default=_default_session)
-    session_student_ids = fields.Many2many(comodel_name='res.partner',
-                                 string='Students in Current Session',
-                                 required='session_id.student_ids',
-                                 help='These are the students currently in the Session')
-    student_ids = fields.Many2many(comodel_name='res.partner',
-                                 string='Students for Sales Order')
+    # session_student_ids = fields.Many2many(comodel_name='res.partner',
+    #                              string='Students in Current Session',
+    #                              required='session_id.student_ids',
+    #                              help='These are the students currently in the Session')
+    # student_ids = fields.Many2many(comodel_name='res.partner',
+    #                              string='Students for Sales Order')
     
-    def create_sale_orders(self):   
-        session_product_id = self.env['product.product'].search([('is_session_product','=', True)], limit=1)
-        if session_product_id:
-            for student in self.student_ids:
-                order_id = self.env['sale.order'].create({
-                    'partner_id': student.id,
-                    'session_id': self.session.id,
-                    'order_line': [(0, 0, {'product_id': session_product_id.id, 
-                                           'price_unit':self.session_id.total_price})]
-                })
+    # def create_sale_orders(self):   
+    #     session_product_id = self.env['product.product'].search([('is_session_product','=', True)], limit=1)
+    #     if session_product_id:
+    #         for student in self.student_ids:
+    #             order_id = self.env['sale.order'].create({
+    #                 'partner_id': student.id,
+    #                 'session_id': self.session.id,
+    #                 'order_line': [(0, 0, {'product_id': session_product_id.id, 
+    #                                        'price_unit':self.session_id.total_price})]
+    #             })
